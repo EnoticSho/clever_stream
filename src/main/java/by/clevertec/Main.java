@@ -9,7 +9,11 @@ import by.clevertec.model.Person;
 import by.clevertec.model.Student;
 import by.clevertec.util.Util;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -40,67 +44,123 @@ public class Main {
 
     public static void task1() {
         List<Animal> animals = Util.getAnimals();
-//        animals.stream() Продолжить ...
+//        animals.stream()
+//                .filter(animal -> animal.getAge() >= 10 && animal.getAge() <= 20)
+//                .sorted(Comparator.comparing(Animal::getAge))
+//                .skip(7*2)
+//                .limit(7)
+//                .forEach(System.out::println);
     }
 
     public static void task2() {
         List<Animal> animals = Util.getAnimals();
-//        animals.stream() Продолжить ...
+//        animals.stream()
+//                .filter(animal -> animal.getOrigin().equals("Japanese"))
+//                .map(animal -> {
+//                    if (animal.getGender().equals("Female")) {
+//                        return animal.getBread().toUpperCase();
+//                    } else {
+//                        return animal.getBread();
+//                    }
+//                })
+//                .forEach(System.out::println);
     }
 
     public static void task3() {
         List<Animal> animals = Util.getAnimals();
-//        animals.stream() Продолжить ...
+//        animals.stream()
+//                .filter(animal -> animal.getAge() > 30)
+//                .map(Animal::getOrigin)
+//                .filter(origin -> origin.startsWith("A"))
+//                .collect(Collectors.toSet())
+//                .forEach(System.out::println);
     }
 
     public static void task4() {
-        List<Animal> animals = Util.getAnimals();
-//        animals.stream() Продолжить ...
+//        List<Animal> animals = Util.getAnimals();
+//        Stream.of(animals.stream()
+//                .filter(animal -> animal.getGender().equals("Female"))
+//                .count())
+//                .forEach(System.out::println);
     }
 
     public static void task5() {
         List<Animal> animals = Util.getAnimals();
-//        animals.stream() Продолжить ...
+//        Stream.of(animals.stream()
+//                .filter(animal -> animal.getAge() >= 20 && animal.getAge() <= 30)
+//                .anyMatch(animal -> animal.getOrigin().equals("Hungarian")))
+//                .forEach(System.out::println);
     }
 
     public static void task6() {
         List<Animal> animals = Util.getAnimals();
-//        animals.stream() Продолжить ...
+//        Stream.of(animals.stream()
+//                .allMatch(animal -> animal.getGender().equals("Male") || animal.getGender().equals("Female")))
+//                .forEach(System.out::println);
     }
 
     public static void task7() {
         List<Animal> animals = Util.getAnimals();
-//        animals.stream() Продолжить ...
+//        Stream.of(animals.stream()
+//                .noneMatch(animal -> animal.getOrigin().equals("Oceania")))
+//                .forEach(System.out::println);
     }
 
     public static void task8() {
         List<Animal> animals = Util.getAnimals();
-//        animals.stream() Продолжить ...
+//        animals.stream()
+//                .sorted(Comparator.comparing(Animal::getBread))
+//                .limit(100)
+//                .max(Comparator.comparing(Animal::getAge))
+//                .map(Animal::getAge)
+//                .ifPresent(System.out::println);
     }
 
     public static void task9() {
         List<Animal> animals = Util.getAnimals();
-//        animals.stream() Продолжить ...
+//        animals.stream()
+//                .map(Animal::getBread)
+//                .map(String::toCharArray)
+//                .mapToInt(chars -> chars.length)
+//                .min()
+//                .ifPresent(System.out::println);
     }
 
     public static void task10() {
         List<Animal> animals = Util.getAnimals();
-//        animals.stream() Продолжить ...
+//        Stream.of(animals.stream()
+//                .mapToInt(Animal::getAge)
+//                .sum())
+//                .forEach(System.out::println);
     }
 
     public static void task11() {
         List<Animal> animals = Util.getAnimals();
-//        animals.stream() Продолжить ...
+//        animals.stream()
+//                .filter(animal -> animal.getOrigin().equals("Indonesian"))
+//                .mapToInt(Animal::getAge)
+//                .average()
+//                .ifPresent(System.out::println);
     }
 
     public static void task12() {
         List<Person> persons = Util.getPersons();
-//        persons.stream() Продолжить ...
+//        persons.stream()
+//                .filter(person -> {
+//                    int age = Period.between(person.getDateOfBirth(), LocalDate.now()).getYears();
+//                    return age >= 18 && age < 27 && person.getGender().equals("Male");
+//                })
+//                .sorted(Comparator.comparingInt(Person::getRecruitmentGroup))
+//                .limit(200)
+//                .forEach(System.out::println);
     }
 
     public static void task13() {
         List<House> houses = Util.getHouses();
-//        houses.stream() Продолжить ...
+        houses.stream()
+                .
+                .forEach(System.out::println);
+
     }
 
     public static void task14() {
@@ -146,6 +206,6 @@ public class Main {
 
     public static void task22() {
         List<Student> students = Util.getStudents();
-//        students.stream() Продолжить ...
+//        students.stream()
     }
 }
